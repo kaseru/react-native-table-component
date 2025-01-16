@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
 import { Cell } from './cell';
 import { sum } from '../utils';
@@ -20,11 +19,6 @@ export class Col extends Component {
 }
 
 export class Cols extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object
-  };
-
   render() {
     const { data, style, widthArr, heightArr, flexArr, textStyle, ...props } = this.props;
     let width = widthArr ? sum(widthArr) : 0;
